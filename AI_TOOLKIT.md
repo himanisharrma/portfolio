@@ -24,6 +24,9 @@ tiers — every Tier-1 line links to a committed artifact.
 | **Autonomous browser verification (Playwright MCP)** | Agents walking the full KYC journey and documenting it; release E2E checks across 12+ routes with evidence screenshots | Flagship `playwright-screenshots/`, phase-gated `test:phase1–6`; SabKYC E2E screenshot set |
 | **Test-driven agentic development** | TDD-first as a constitution rule; 8-phase service-hardening campaign (~560 tests); CI red → green across three release tags | Flagship test suite (3,045 cases), `v0.1.0`→`v0.3.0-ci-all-passing` |
 | **AI-assisted security remediation** | Full git-history secret scrub (gitleaks + git-filter-repo across 255 commits); an 11-repo branding/PII remediation program run agentically with quarantine + bundle-backup safety protocol | Flagship Act-3 notes; remediation workspace logs |
+| **RAG pipeline (chunking, BM25 retrieval, cited generation)** | Grounded compliance Q&A over the public RBI KYC Master Direction: 188 heading-aware chunks, dependency-free Okapi BM25, answers cite excerpt ids and refuse off-corpus questions | `rekyc-compliance-module/compliance-qa/` |
+| **Evals (versioned prompts, measured before shipping)** | 12-case harness with an out-of-scope refusal trap: baseline prompt 11/12 (hallucinated off-corpus), shipped prompt **12/12** — the measured delta is the grounding rule | `compliance-qa/evals/` + `results_v1/v2.json` |
+| **Prompt caching** | Stable system prefix (versioned prompt + corpus digest, ~8.7K tokens) behind a `cache_control` breakpoint: 1 write, 11 reads per eval pass at ~0.1× input price; rate-limit-aware harness encodes the measured ops constraints | `compliance-qa/qa.py`, eval logs |
 
 ## Tier 2 — Directed at program level
 
@@ -44,9 +47,8 @@ On the learning path (Anthropic Academy + OpenAI equivalents), with planned firs
 
 - **Claude API in-product features** — tool use / function calling + structured JSON output for an
   AI case-summary endpoint (planned: SabKYC).
-- **RAG pipelines** — grounded compliance Q&A over the RBI KYC Master Directions (planned:
-  rekyc-compliance-module), with prompt caching + batch processing for the bulk path.
-- **Evals** — versioned prompt suites with automated scoring before shipping prompt changes.
+- **Batch processing** — Message Batches API for the bulk re-KYC summarization path (the
+  compliance-qa request shape is batch-ready).
 - **Vision / multimodal** — Claude vision field-extraction vs. the existing Textract pipeline
   (a build-vs-buy analysis on the flagship).
 - **Headless CI usage** — `claude-code-action` automated PR review on GitHub.
