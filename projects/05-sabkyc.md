@@ -28,6 +28,15 @@ screenshots captured as evidence, zero stale-brand strings rendered. The session
 surfaced and fixed a real auth bug class (stale in-memory seed users vs. the SQLite seeder —
 duplicate-seed dedupe committed).
 
+## See it running
+
+A captured live tour of all five roles plus the Re-KYC trigger-configuration flow — the full 12-screenshot narrative is [WALKTHROUGH_CAPTURED.md](https://github.com/himanisharrma/KYC-Re-Verification_SabKYC/blob/main/docs/WALKTHROUGH_CAPTURED.md) in the repo.
+
+| | |
+|---|---|
+| ![Admin overview](../assets/sabkyc/02-admin-overview.png) | ![Trigger config](../assets/sabkyc/06-trigger-config-create.png) |
+| ![Merchant KYC status](../assets/sabkyc/09-merchant-kyc-approved.png) | ![Approver](../assets/sabkyc/12-approver-dashboard.png) |
+
 ## AI capabilities demonstrated
 
 **MCP-driven autonomous browser verification** (Playwright MCP: multi-role E2E walkthrough
