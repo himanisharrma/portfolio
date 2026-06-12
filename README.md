@@ -36,6 +36,10 @@ compliance engineering — built inside a 1,584-line AI governance constitution.
 official courses (Anthropic Academy / Skilljar) and their OpenAI equivalents, in three honest tiers:
 **applied in projects** (with linked evidence) · **directed at program level** · **currently building with**.
 
+**[→ Field Notes](FIELD-NOTES.md)** — the problems I hit building with AI and the practices
+that survived: UI/UX workflow, decomposition framework, hallucination combat, model routing,
+and the concepts in the order I learned them.
+
 The short version:
 
 - **Agentic coding at scale** — the flagship is 95% AI-co-authored (213/223 commits) across three Claude
