@@ -27,6 +27,9 @@ tiers — every Tier-1 line links to a committed artifact.
 | **RAG pipeline (chunking, BM25 retrieval, cited generation)** | Grounded compliance Q&A over the public RBI KYC Master Direction: 188 heading-aware chunks, dependency-free Okapi BM25, answers cite excerpt ids and refuse off-corpus questions | `rekyc-compliance-module/compliance-qa/` |
 | **Evals (versioned prompts, measured before shipping)** | 12-case harness with an out-of-scope refusal trap: baseline prompt 11/12 (hallucinated off-corpus), shipped prompt **12/12** — the measured delta is the grounding rule | `compliance-qa/evals/` + `results_v1/v2.json` |
 | **Prompt caching** | Stable system prefix (versioned prompt + corpus digest, ~8.7K tokens) behind a `cache_control` breakpoint: 1 write, 11 reads per eval pass at ~0.1× input price; rate-limit-aware harness encodes the measured ops constraints | `compliance-qa/qa.py`, eval logs |
+| **Tool use (function calling) + structured outputs, in-product** | AI case-summary endpoint: the model calls `get_rekyc_history` when it needs re-KYC posture, returns schema-enforced JSON (enum recommendation, evidence-grounded flags); PII masked to last-4 at the boundary; smoke-verified live | `KYC-Re-Verification_SabKYC/ai-service/` |
+| **Headless CI agent (automated PR review)** | Claude Code running in GitHub Actions reviews every flagship PR against the RBI compliance checklist | flagship `.github/workflows/claude-pr-review.yml` |
+| **Scheduled agent routines** | Weekly autonomous repo-health run (secret/brand scan, type-check, tests) that files issues on failure | flagship `.github/workflows/repo-health.yml` |
 
 ## Tier 2 — Directed at program level
 
@@ -45,14 +48,36 @@ Capabilities I've operated as the orchestrator (the agent executed; I scoped, ga
 
 On the learning path (Anthropic Academy + OpenAI equivalents), with planned first applications:
 
-- **Claude API in-product features** — tool use / function calling + structured JSON output for an
-  AI case-summary endpoint (planned: SabKYC).
 - **Batch processing** — Message Batches API for the bulk re-KYC summarization path (the
   compliance-qa request shape is batch-ready).
-- **Vision / multimodal** — Claude vision field-extraction vs. the existing Textract pipeline
-  (a build-vs-buy analysis on the flagship).
-- **Headless CI usage** — `claude-code-action` automated PR review on GitHub.
+- **Vision / multimodal extraction** — Claude vision field-extraction vs. the existing Textract
+  pipeline (a build-vs-buy analysis on the flagship).
 - **Computer use** — agent-driven UI walkthroughs beyond Playwright.
+
+---
+
+## Where I'm heading — the 2026 frontier (roadmap & analysis, not claims)
+
+How I read the current landscape, and what I'm adopting next — the analysis a PM owes her
+roadmap:
+
+- **Managed agents** — agent loops moving server-side (persistent, versioned agent configs;
+  per-session sandboxes; outcome-graded runs). My MCP server was built for exactly this
+  world: a governed tool surface any hosted agent can consume.
+- **Computer-use and browser agents** — verification is already agentic in my workflow
+  (Playwright MCP); the next step is agents operating full UIs, which raises the same
+  questions my KYC work answers: gates, audit trails, least-privilege context.
+- **Agentic search & deep research** — multi-source, citation-grounded research as a
+  workflow primitive; my compliance-qa refusal-trap eval is the same trust problem in
+  miniature.
+- **The adaptive-thinking / effort era** — model reasoning depth becoming a tunable product
+  parameter (cost ↔ quality per route) rather than a fixed property; this turns model
+  selection into ongoing product management.
+- **MCP as the cross-vendor standard** — the bet I made building (not just consuming) an MCP
+  server: workflows as portable capabilities, agents as interchangeable operators.
+- **1M-token context workflows** — long-context models change decomposition strategy ("give
+  it the module" vs "give it the repo"), but my field-note still holds: explicit context
+  beats big context.
 
 ---
 
