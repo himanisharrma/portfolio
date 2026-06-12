@@ -24,6 +24,17 @@ parts demos usually skip:
 - **Audit log on every action** — the compliance requirement treated as a first-class feature.
 - **Real-time everywhere** — Socket.io pushes state changes to every affected dashboard.
 
+## See it running
+
+A captured live run (June 2026) — website signup → 5-step KYC wizard → admin user management → full approval chain → Re-KYC trigger config + single & bulk triggers, with every state change verified in the database. Full 29-screenshot narrative: [DEMO_WALKTHROUGH.md](https://github.com/himanisharrma/re-kyc-with-landing-page/blob/main/docs/DEMO_WALKTHROUGH.md) in the repo.
+
+| | |
+|---|---|
+| ![Website](../assets/rekyc-landing/01-website-hero.png) | ![KYC wizard](../assets/rekyc-landing/04-kyc-wizard-step1-owner.png) |
+| ![Admin users](../assets/rekyc-landing/12-admin-users-arjun-captured.png) | ![Verifier decision](../assets/rekyc-landing/17-verifier-decision-modal.png) |
+| ![Risk scoring](../assets/rekyc-landing/19-risk-assessment-modal.png) | ![Final approval](../assets/rekyc-landing/20-approver-final-decision.png) |
+| ![Trigger config](../assets/rekyc-landing/24-trigger-config-create-modal.png) | ![Bulk trigger](../assets/rekyc-landing/28-bulk-trigger-modal.png) |
+
 ## AI capabilities demonstrated
 
 **Agentic coding loop end-to-end** — 6/6 commits AI-co-authored (Claude Opus 4.7 trailers);
