@@ -53,6 +53,15 @@ flowchart LR
     SIG --> RD
 ```
 
+## See it running
+
+Captured June 2026 on a local stack with the database built **from zero** via the consolidated migration chain — role-tabbed login plus the agent (Maker), approver (Checker) and admin consoles. Full capture + the two published-defect classes this bootstrap surfaced and fixed: [WALKTHROUGH_CAPTURED.md](https://github.com/himanisharrma/Identity-Verification-Amazon-Rekognition/blob/portfolio/docs/walkthrough/WALKTHROUGH_CAPTURED.md).
+
+| | |
+|---|---|
+| ![Role login](../assets/flagship/01-login-role-tabs.png) | ![Agent dashboard](../assets/flagship/02-agent-dashboard.png) |
+| ![Approver dashboard](../assets/flagship/05-approver-dashboard.png) | ![Admin dashboard](../assets/flagship/06-admin-dashboard.png) |
+
 ## The Maker-Checker journey (simplified from the 19-state machine)
 
 ```mermaid
