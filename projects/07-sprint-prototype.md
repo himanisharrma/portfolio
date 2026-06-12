@@ -29,6 +29,15 @@ Merchant dashboard with a dynamic "Re-KYC Pending" banner and status stepper · 
 update wizard (pre-filled sanitized data, document upload, address-change validation) · demo
 controls to switch compliance states live in a stakeholder review.
 
+## See it running
+
+A captured live run of the demo-script journey — all seven banner states, the 6-step wizard, the address-change ⇒ new-address-proof guardrail (blocked, then cleared), and the terms-gated submit. Full 13-screenshot narrative: [WALKTHROUGH_CAPTURED.md](https://github.com/himanisharrma/re-kyc-sprint-prototype/blob/main/docs/WALKTHROUGH_CAPTURED.md) in the repo.
+
+| | |
+|---|---|
+| ![Dashboard](../assets/sprint-prototype/01-dashboard-default.png) | ![Guardrail active](../assets/sprint-prototype/09-upload-address-guardrail.png) |
+| ![Guardrail cleared](../assets/sprint-prototype/11-guardrail-cleared-after-upload.png) | ![Terms-gated submit](../assets/sprint-prototype/12-submit-gated-by-terms.png) |
+
 ## AI capabilities demonstrated
 
 Built 4/4 AI-co-authored (Claude Opus 4.7/4.8 trailers) — and unusually, **the AI-PM working
