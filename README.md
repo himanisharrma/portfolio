@@ -25,12 +25,14 @@ compliance engineering — built inside a 1,584-line AI governance constitution.
 |---|---|---|
 | [VCIP MCP Server — "KYC Orchestrator"](projects/02-vcip-mcp-server.md) | A 6-tool MCP server that lets an AI agent run an assisted KYC review — with PII masking and a human-gated verdict | **Built a custom MCP server**; subagents, skills, hooks, slash commands in the same repo — mirrored for Claude *and* Codex |
 | [Re-KYC Compliance Module](projects/03-rekyc-compliance-module.md) | Periodic re-verification engine: FSM, RBAC, compliance crons, bulk triggers — plus a grounded RAG Q&A over the RBI Master Direction | **RAG + evals + prompt caching, measured** (baseline 11/12 vs shipped 12/12); governed extraction w/ verified test parity |
-| [Sales Skills Plugin](projects/04-sales-skills-plugin.md) | A 9-skill Claude Code plugin automating a sales team's proposals, decks & campaigns over a two-tier knowledge base | **Shipped a distributable Claude Code plugin** — a PM automating a whole team's workflow |
+| [Sales Skills Plugin](projects/04-sales-skills-plugin.md) | An 8-skill Claude Code plugin automating a sales team's proposals, decks & campaigns over a two-tier knowledge base | **Shipped a distributable Claude Code plugin** — a PM automating a whole team's workflow |
 | [SabKYC — KYC Re-Verification](projects/05-sabkyc.md) | Multi-role KYC re-verification portal (admin / verifier / risk / approver / merchant) | MCP-driven Playwright E2E verification with evidence screenshots |
 | [Re-KYC Platform with Landing Page](projects/06-rekyc-landing.md) | Full-stack KYC management: Verifier → Risk → Approver workflow, bulk Excel-driven Re-KYC | 100% AI-co-authored build in the agentic loop |
 | [Re-KYC Sprint Prototype](projects/07-sprint-prototype.md) | RBI-aligned periodic-KYC-refresh prototype, sprint-scoped | Ships its own `AI_PM_NOTES.md` + `DEMO_SCRIPT.md` |
 
 ## How I work with AI
+
+**[→ Capabilities & Evidence](CAPABILITIES.md)** — every AI-capability badge on my profile mapped to the exact repo/file that proves it, with a measured proof point.
 
 **[→ The AI Toolkit](AI_TOOLKIT.md)** — every capability I use, in the vocabulary of Anthropic's
 official courses (Anthropic Academy / Skilljar) and their OpenAI equivalents, in three honest tiers:
@@ -60,4 +62,4 @@ segregation · Aadhaar masking & consent · WORM audit trails · payment-aggrega
 
 ---
 
-*This is a private, invite-only portfolio. Code references link to private repos — access on request.*
+*Every code reference links to a public repo you can open directly.*
