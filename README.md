@@ -1,10 +1,10 @@
-# Himani Sharma — Tech AI Product Manager · Portfolio
+# Himani Sharma — AI-Native Product Manager · Fintech
 
-**Fintech / KYC-compliance product manager who ships.** I build regulated-domain products (Video KYC,
-Re-KYC, onboarding) end-to-end — product strategy, architecture, code, tests, AWS infra — using a
-governed AI engineering system I design and operate myself: Claude Code with project-memory
-constitutions, custom subagents, skills, hooks, slash commands, and a custom MCP server; the same
-harness mirrored on OpenAI Codex.
+**AI-native product manager in fintech.** I take AI products from strategy to shipped — discovery,
+roadmap, architecture, launch — and, rare for a PM, I build hands-on. My most recent depth is regulated
+**KYC / Re-KYC / onboarding**, built end-to-end (product → code → tests → AWS) on a governed AI
+engineering system I design and operate: Claude Code with project-memory constitutions, custom
+subagents, skills, hooks, slash commands, and a custom MCP server; the same harness mirrored on OpenAI Codex.
 
 > Every AI-capability claim in this portfolio links to a committed artifact you can open — a config, a
 > server, a test run, a screenshot. Nothing here is aspirational vocabulary.
@@ -19,7 +19,9 @@ Rekognition liveness & face-match, live WebRTC agent calls, 19-state Maker-Check
 compliance engineering — built inside a 1,584-line AI governance constitution.
 → repo: [`Identity-Verification-Amazon-Rekognition`](https://github.com/himanisharrma/Identity-Verification-Amazon-Rekognition) (branch `portfolio`)
 
-## Projects
+## Recent work
+
+*Recent fintech builds — spanning regulated KYC/RegTech and GTM automation, each shipped end-to-end with AI.*
 
 | Project | One-liner | AI story |
 |---|---|---|
@@ -55,10 +57,11 @@ The short version:
 - **Verification culture** — phase-gated E2E suites, autonomous Playwright-MCP browser walkthroughs,
   evidence screenshots, "every number with its evidence" docs.
 
-## Domain
+## Recent domain depth
 
-RBI Master Direction KYC · V-CIP (Video customer identification) · periodic Re-KYC · Maker-Checker
-segregation · Aadhaar masking & consent · WORM audit trails · payment-aggregator merchant onboarding.
+My most recent role went deep on regulated KYC: RBI Master Direction KYC · V-CIP (Video customer
+identification) · periodic Re-KYC · Maker-Checker segregation · Aadhaar masking & consent · WORM audit
+trails · payment-aggregator merchant onboarding.
 
 ---
 
