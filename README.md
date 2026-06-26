@@ -14,7 +14,7 @@ flow end to end. I also build with AI, so the products I design, I can ship myse
 ## What I do
 
 - 💳 **Payments & Fintech** (consumer & B2B) — UPI & payments, lending & cards, collections & payouts
-- 🛠️ **A PM who builds** — I use AI to turn product ideas into working software I can test and ship
+- 🛠️ **Builds with AI** — I use AI to turn product ideas into working software I can test and ship
 - 📈 **Commercial & Growth** — market research, GTM, pricing & positioning (the 3.0 payments launch)
 - 🔁 **Reconciliation & Settlement** — PayOps, a self-built control room: match, net-settle, exception states
 
